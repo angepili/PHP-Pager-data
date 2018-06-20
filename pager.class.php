@@ -2,12 +2,16 @@
 
 class Pager {
 
-    public function __construct($data, $limit = 6, $page = 0){
-        $this->limit = $limit;
+    function __construct($data, $page = 0){
+        $this->limit();
         $this->page = (isset($_REQUEST['p']) && is_numeric($_REQUEST['p'])) ? $_REQUEST['p'] : $page;
         $this->data = $data;
         $this->output = '';
         $this->offset = 0;
+    }
+
+    public function limit($limit = 10){
+        $this->limit = $limit ? $limit : 10;
     }
 
     public function rows(){
