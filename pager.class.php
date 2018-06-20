@@ -28,7 +28,7 @@ class Pager {
     }
 
     public function paginator(){
-        $pages = floor(count($this->data) / $this->limit);
+        $pages = floor(count($this->data) / $this->limit) -1 ;
         for($i = 0; $i <= $pages; $i++){
             $this->paginator[$i]['anchor'] = $i + 1;
             $this->paginator[$i]['link']   = '?p='.$i; 
