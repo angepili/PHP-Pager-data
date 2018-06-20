@@ -1,6 +1,6 @@
 PHP Pager data
 =============
-´´´PHP
+```PHP
 $data = ''; // generic php associative array, or json object;
 
 // init
@@ -14,4 +14,4 @@ $pager->rows();
 
 // get pagination
 $pager->pagination();
-´´´
+```
